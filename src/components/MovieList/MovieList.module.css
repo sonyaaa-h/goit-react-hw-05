@@ -1,0 +1,49 @@
+.movieList {
+    display: grid;
+    max-width: calc(100vw - 48px);
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-gap: 24px;
+    list-style: none;
+    margin: 0 auto 24px;
+}
+
+.movieItem {
+    border: 1px solid rgb(27, 27, 27);
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.movieItem:hover {
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.7);
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+
+.movieInfo {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(53, 53, 53);
+    min-height: 125px;
+}
+
+.movieTitle {
+    padding: 10px 0 0 10px;
+}
+
+.movieScore {
+    font-size: 12px;
+}
+
+.green {
+    color: rgb(83, 204, 83);
+}
+
+.red {
+    color: rgb(223, 37, 37);
+}
