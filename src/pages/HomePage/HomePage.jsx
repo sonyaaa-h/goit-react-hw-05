@@ -29,6 +29,7 @@ const HomePage = () => {
 
         getData();
     }, [page]);
+    
 
     return (
         <div>

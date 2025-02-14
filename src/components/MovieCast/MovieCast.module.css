@@ -1,0 +1,34 @@
+.castList {
+    display: grid;
+    max-width: calc(100vw - 48px);
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 24px;
+    margin: 0 32px;;
+}
+
+.castItem {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+
+.castImg {
+    width: 150px;
+}
+
+.castName {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.isError {
+    text-align: center;
+    font-size: 24px;
+    color: rgb(255, 0, 0);
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+}

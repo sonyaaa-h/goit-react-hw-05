@@ -1,0 +1,126 @@
+.image {
+    width: 250px;
+
+}
+
+.backdropImg {
+    position: relative;
+    display: block;
+    margin-right: 120px;
+    margin-left: auto;
+    height: 500px;
+    max-width: 1200px;
+    object-fit: cover;
+}
+
+.backdropOverlay {
+    position: absolute;
+    top: 108px;
+    left: 0;
+    width: 100%;
+    height: 500px;
+}
+
+.container {
+    position: absolute;
+    top: 136px;
+    left: 30%;
+
+    display: flex;
+    gap: 100px;
+}
+
+@media screen and (max-width: 1567px) {
+    .backdropOverlay {
+        background-image: linear-gradient(90deg, rgba(36, 36, 36, 1) 19%, rgba(36, 36, 36, 1) 28%, rgba(36, 36, 36, 0.62) 56%, rgba(36, 36, 36, 0.9) 81%);
+    }
+}
+
+@media screen and (min-width: 1568px) {
+    .backdropOverlay {
+        background-image: linear-gradient(90deg, rgba(36, 36, 36, 1) 48%, rgba(36, 36, 36, 0.89) 63%, rgba(36, 36, 36, 0.62) 81%, rgba(36, 36, 36, 0.9) 100%);
+    }
+}
+
+.info {
+    /* display: flex; */
+    /* flex-direction: column;
+    gap: 12px; */
+    max-width: 650px;
+}
+
+.description {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    /* margin-bottom: 26px; */
+}
+
+.overview, .overview {
+    color: rgb(185, 185, 185);
+}
+
+.titleMovie {
+    font-size: 32px;
+    color: rgb(240, 240, 240);
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.additionalInfo {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(185, 185, 185);
+    margin-bottom: 120px;
+}
+
+.genres {
+    display: flex;
+    gap: 12px;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+    margin: 10px 0 10px 36px;
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+}
+
+.active {
+    color: rgb(255, 0, 0);
+}
+
+.notFound, .isError {
+    text-align: center;
+    font-size: 24px;
+    color: rgb(255, 0, 0);
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+}
+
+.linkWrapper {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    margin-bottom: 12px;
+    margin-left: 24px;
+}
+
+.linkBack {
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.linkBack:hover,
+.linkBack:focus {
+    color: rgb(255, 0, 0);
+}

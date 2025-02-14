@@ -1,0 +1,37 @@
+.isError, .notFound {
+    text-align: center;
+    font-size: 24px;
+    color: rgb(255, 0, 0);
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+}
+
+.reviewList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 0 36px;
+}
+
+.reviewItem {
+    border: 1px solid rgb(27, 27, 27);
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.author {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.authorContainer {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}

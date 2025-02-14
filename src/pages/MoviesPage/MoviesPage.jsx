@@ -5,14 +5,29 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import LoadMore from "../../components/LoadMore/LoadMore";
 import s from "./MoviesPage.module.css";
 import { ThreeDots } from "react-loader-spinner";
+import { useSearchParams } from "react-router-dom";
 
 const MoviesPage = () => {
     const [movies, setMovies] = useState([]);
-    const [query, setQuery] = useState("");
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
+
+    const [searchParams, setSearchParams] = useSearchParams();
+    const queryParam = searchParams.get("query") ?? "";
+
+    const [query, setQuery] = useState(queryParam);
+
+    useEffect(() => {
+        if (!queryParam) {
+            setMovies([]);
+            return;
+        }
+
+        setQuery(queryParam);
+        setPage(1);
+    }, [queryParam]);
 
     useEffect(() => {
         if (!query) return;
@@ -33,19 +48,27 @@ const MoviesPage = () => {
         getData();
     }, [query, page]);
 
-    const handleSearch = (newQuery) => {
-        console.log(newQuery);
+    // const handleSearch = (newQuery) => {
+    //     console.log(newQuery);
 
+    //     if (newQuery.trim() === "") return;
+    //     setQuery(newQuery);
+    //     setPage(1);
+    //     setMovies([]);
+    //     setTotalPages(1);
+    // };
+
+    const handleChangeQuery = (newQuery) => {
         if (newQuery.trim() === "") return;
-        setQuery(newQuery);
-        setPage(1);
-        setMovies([]);
-        setTotalPages(1);
+        setSearchParams({ query: newQuery });
     };
 
     return (
         <div>
-            <SearchBar onSubmit={handleSearch} />
+            <SearchBar
+                onSubmit={handleChangeQuery}
+                query={queryParam}
+            />
             <MovieList movies={movies} />
             {isLoading && (
                 <div className={s.loader}>

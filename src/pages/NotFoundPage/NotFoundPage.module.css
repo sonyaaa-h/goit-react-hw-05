@@ -1,0 +1,28 @@
+.notFound {
+    text-align: center;
+    font-size: 24px;
+    color: rgb(255, 0, 0);
+}
+
+.link {
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.link:hover,
+.link:focus {
+    color: rgb(255, 0, 0);
+}
+
+.notFoundPage {
+    margin-left: 36px;
+}
+
+.linkWrapper {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
